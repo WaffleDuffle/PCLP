@@ -1,7 +1,6 @@
 /*Scrieți un program care declară și inițializează o variabilă întreagă fără semn, o variabilă reală cu reprezentare scurtă, o variabilă de tip caracter fără semn, o variabilă reală cu dublă precizie cu reprezentare lungă, cu valori corespunzătoare, arbitrare.*/
 
 #include <iostream>
-using namespace std;
 
 int main()
 {
