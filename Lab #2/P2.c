@@ -1,7 +1,7 @@
 /*Scrieţi un program care calculează şi afişează pe ecran media aritmetică a două numere întregi citite de la tastatură.*/
 
 #include <stdio.h>
-using namespace std;
+
 int a, b;
 float ma;
 int main()
