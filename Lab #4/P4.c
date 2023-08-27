@@ -12,12 +12,12 @@ Care număr de pornire, sub un milion, produce cel mai lung lanț?
 
 Realizați un program care să determine numărul de pornire sub un milion care produce cel mai lung lanț. Afișați în consolă numărul precum și lungimea lanțului, fiecare separat printr-un spațiu de tabulare.
 
-NOTĂ: Odată ce lanțul începe, termenii pot depăși un milion.*/
+NOTĂ: Odată ce lanțul începe, termenii pot depăși zece milioane.*/
 
 #include <stdio.h>
-unsigned collatz(unsigned x)
+long long int collatz(long long int x)
 {
-    unsigned l = 0;
+    long long int l = 0;
     while(x > 1)
     {
 
@@ -25,6 +25,7 @@ unsigned collatz(unsigned x)
             x = x*3 + 1;
         else
             x /= 2;
+
         l++;
     }
 
@@ -32,10 +33,10 @@ unsigned collatz(unsigned x)
 }
 int main()
 {
-    long int maxi = -1 , lmax = -1;
-    for(unsigned i = 1000000 ; i >= 1 ; i--)
+    long long int maxi = -1 , lmax = -1;
+    for(long long int i = 10000000 ; i >= 1 ; i--)
     {
-        int x = collatz(i);
+        long long int x = collatz(i);
         if(lmax < x)
         {
             maxi = i;
@@ -43,5 +44,7 @@ int main()
         }
     }
     printf("%ld\t%ld\n",maxi,lmax);
+
     return 0;
 }
+
